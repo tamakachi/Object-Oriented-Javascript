@@ -64,3 +64,15 @@ userThree.logout()
 
 // Making Methods chainable, just like promises, you can chain methods as long as you return this inside the method
 userThree.increaseScore().increaseScore().increaseScore()
+
+
+// Subclasses extends the blueprints of one class into another, distinguishing methods can be added to make them different
+
+class Admin extends User {
+    deleteUser(userToDelete){
+        console.log(`${userToDelete} has been deleted by admin ${this.name}`)
+    }
+}
+
+const adminOne = new Admin("Kent","M",32)
+adminOne.deleteUser("Dirkadirka")
